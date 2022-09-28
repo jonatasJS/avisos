@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #282A36;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .container {
+      height: 90vh;
+      width: 90vw;
+      background-color: #282A36;
+      box-shadow: 0 0 100px 10px rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+    }
+
+    .container .header {
+      display: flex;
+      justify-content: start;
+      padding: 20px 0 0 20px;
+      gap: 10px;
+      align-items: center;
+      height: 3vh;
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .container .header span {
+      border-radius: 50%;
+      height: 1.7vh;
+      width: 1.7vh;
+      background-color: var(--color);
+    }
+
+    .container .main {
+      height: 100%;
+      padding: 20px;
+      width: 100%;
+      color: aliceblue;
+    }
+
+    .container .main .title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+    }
+
+    .container .main .description {
+      height: 95%;
+      max-height: 95%;
+      max-width: 100%;
+      border: 0;
+      outline: none;
+      overflow-y: auto;
+      overflow-x: none;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <span style="--color:#FF5F5A;"></span>
+      <span style="--color:#FFBE2E;"></span>
+      <span style="--color:#2ACA44;"></span>
+    </header>
+    <main class="main">
+      <div contenteditable class="title">
+        <h1>teste</h1>
+      </div>
+      <div contenteditable class="description">
+        <p>teste</p>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const title = document.querySelector('.title');
+
+    // inpedir que o usuário digite mais de 20 caracteres
+    title.addEventListener('keyup', (e) => {
+      if (e.target.innerText.length > 18) {
+        e.target.innerText = `<h1>${e.target.innerText.slice(0, 20)}</h1>`;
+      }
+    });
+  </script>
+</body>
+</html>
