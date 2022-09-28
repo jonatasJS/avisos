@@ -27,6 +27,7 @@
   <script>
     const body = document.querySelector('body');
     let image = 1;
+    const segundos = 15;
 
     body.style.backgroundImage = `url(/${image}.png)`;
     // body.style.backgroundSize = 'cover';
@@ -39,7 +40,7 @@
         image = 1;
       }
       body.style.backgroundImage = `url(/${image}.png)`;
-    }, 5000);
+    }, segundos*1000);
   </script>
 </body>
 </html>
