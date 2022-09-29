@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic" rel="stylesheet" />
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="font-awesome.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -11,6 +13,7 @@
         padding: 0;
         box-sizing: border-box;
         background-color: #282a36;
+        font-family: "inter", "Ubuntu", sans-serif;
       }
 
       body {
@@ -41,10 +44,20 @@
       }
 
       .container .header span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         border-radius: 50%;
         height: 1.7vh;
         width: 1.7vh;
+        color: #fff;
         background-color: var(--color);
+      }
+
+      .container .header span:hover {
+        cursor: pointer;
+        opacity: 0.5;
       }
 
       .container .main {
@@ -63,6 +76,7 @@
         justify-content: center;
         align-items: center;
         outline: none;
+        text-transform: capitalize;
       }
 
       .container .main .title h1 {
@@ -84,9 +98,9 @@
   <body>
     <div class="container">
       <header class="header">
-        <span style="--color: #ff5f5a"></span>
-        <span style="--color: #ffbe2e"></span>
-        <span style="--color: #2aca44"></span>
+        <span style="--color: #ff5f5a"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <span style="--color: #ffbe2e"><i class="fa fa-minus" aria-hidden="true"></i></span>
+        <span style="--color: #2aca44"><i class="fa fa-square-o" aria-hidden="true"></i></span>
       </header>
       <main class="main">
         <div class="title">
